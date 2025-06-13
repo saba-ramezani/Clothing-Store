@@ -3,7 +3,7 @@ import { Navbar } from './components'
 
 const App = () => {
   return (
-    <div className='bg-amber-300'>
+    <div className=''>
       <Navbar/>
     </div>
   )
