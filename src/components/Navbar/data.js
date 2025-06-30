@@ -1,3 +1,5 @@
+import { heroSaleImg, heroShoppingImg, heroWomenImg } from "../../assets";
+
 export const Menu = [
   {
     id: 1,
@@ -30,6 +32,7 @@ export const Menu = [
   },
 ];
 
+
 export const DropdownLinks = [
   {
     id: 1,
@@ -45,5 +48,29 @@ export const DropdownLinks = [
     id: 3,
     name: "Top Rated",
     link: "/#",
+  },
+];
+
+export const ImageList = [
+  {
+    id: 1,
+    img: heroWomenImg,
+    title: "Upto 50% off on all Men's Wear",
+    description:
+      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 2,
+    img: heroShoppingImg,
+    title: "30% off on all Women's Wear",
+    description:
+      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 3,
+    img: heroSaleImg,
+    title: "70% off on all Products Sale",
+    description:
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
