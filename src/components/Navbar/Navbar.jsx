@@ -3,7 +3,7 @@ import { darkModeBtn, lightModeBtn, logo } from '../../assets'
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import classNames from "classnames";
-import { DropdownLinks, Menu } from './data';
+import { DropdownLinks, Menu } from '../data';
 import { IoMdArrowDropdown } from "react-icons/io";
 
 
@@ -56,7 +56,7 @@ const Menubar = () => {
         {Menu.map((item) => {
           if (item.name === "Trending Items") {
             return (
-              <li id={item.id} className='group'>
+              <li id={item.id} className='group' key={item.id}>
                 <a href={item.link} className='hover:text-[#fea928] flex items-center gap-2 text-white px-4 text-[15px]'>
                   {item.name}
                   <IoMdArrowDropdown className='group-hover:rotate-180 transition-all duration-200' />
@@ -74,7 +74,7 @@ const Menubar = () => {
             )
           } else {
             return (
-            <li id={item.id}>
+            <li id={item.id} key={item.id}>
               <a href={item.link} className='hover:text-[#fea928] text-white px-4 text-[15px]'>{item.name}</a>
             </li>
             )

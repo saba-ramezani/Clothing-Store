@@ -1,11 +1,11 @@
-import React from 'react'
-import { Navbar, Hero } from './components'
+import { Navbar, Hero, Products } from './components'
 
 const App = () => {
   return (
     <div className=''>
       <Navbar/>
       <Hero />
+      <Products />
     </div>
   )
 }

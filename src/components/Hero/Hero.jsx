@@ -1,11 +1,11 @@
 import React from 'react'
-import { ImageList } from '../Navbar/data';
 import { FaShoppingCart } from "react-icons/fa";
 import { SwiperSlide, Swiper } from "swiper/react"
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { Autoplay } from 'swiper/modules';
+import { ImageList } from '../data';
 
 
 const Hero = () => {

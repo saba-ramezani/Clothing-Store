@@ -4,3 +4,8 @@ export {default as darkModeBtn} from './website/dark-mode-button.png'
 export {default as heroSaleImg} from './hero/sale.png'
 export {default as heroShoppingImg} from './hero/shopping.png'
 export {default as heroWomenImg} from './hero/women.png'
+
+export {default as womenImg1} from './women/women.png'
+export {default as womenImg2} from './women/women2.jpg'
+export {default as womenImg3} from './women/women3.jpg'
+export {default as womenImg4} from './women/women4.jpg'

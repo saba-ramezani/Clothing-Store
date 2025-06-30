@@ -1,4 +1,4 @@
-import { heroSaleImg, heroShoppingImg, heroWomenImg } from "../../assets";
+import { heroSaleImg, heroShoppingImg, heroWomenImg, womenImg1, womenImg2, womenImg3, womenImg4 } from "../assets";
 
 export const Menu = [
   {
@@ -17,17 +17,17 @@ export const Menu = [
     link: "/#",
   },
   {
-    id: 3,
+    id: 4,
     name: "Mens Wear",
     link: "/#",
   },
   {
-    id: 3,
+    id: 5,
     name: "Electronics",
     link: "/#",
   },
   {
-    id: 4,
+    id: 6,
     name: "Trending Items",
   },
 ];
@@ -72,5 +72,48 @@ export const ImageList = [
     title: "70% off on all Products Sale",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
+export const ProductsData = [
+  {
+    id: 1,
+    img: womenImg1,
+    title: "Women Ethnic",
+    rating: 5.0,
+    color: "white",
+    aosDelay: "0",
+  },
+  {
+    id: 2,
+    img: womenImg2,
+    title: "Women western",
+    rating: 4.5,
+    color: "Red",
+    aosDelay: "200",
+  },
+  {
+    id: 3,
+    img: womenImg3,
+    title: "Goggles",
+    rating: 4.7,
+    color: "brown",
+    aosDelay: "400",
+  },
+  {
+    id: 4,
+    img: womenImg4,
+    title: "Printed T-Shirt",
+    rating: 4.4,
+    color: "Yellow",
+    aosDelay: "600",
+  },
+  {
+    id: 5,
+    img: womenImg2,
+    title: "Fashin T-Shirt",
+    rating: 4.5,
+    color: "Pink",
+    aosDelay: "800",
   },
 ];
