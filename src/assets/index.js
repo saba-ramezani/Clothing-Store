@@ -13,3 +13,5 @@ export {default as womenImg4} from './women/women4.jpg'
 export {default as shirtImg1} from './shirt/shirt.png'
 export {default as shirtImg2} from './shirt/shirt2.png'
 export {default as shirtImg3} from './shirt/shirt3.png'
+
+export {default as banner} from './website/orange-pattern.jpg'
