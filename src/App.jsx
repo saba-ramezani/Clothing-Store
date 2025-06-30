@@ -1,5 +1,4 @@
-import { Navbar, Hero, Products } from './components'
-import TopProducts from './components/TopProducts/TopProducts'
+import { Navbar, Hero, Products, TopProducts, Banner } from './components'
 
 const App = () => {
   return (
@@ -8,6 +7,7 @@ const App = () => {
       <Hero />
       <Products />
       <TopProducts />
+      <Banner />
     </div>
   )
 }

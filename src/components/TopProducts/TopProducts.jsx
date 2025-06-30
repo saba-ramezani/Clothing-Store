@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const TopProducts = () => {
   return (
-    <div className='relative flex flex-col my-16'>
+    <div className='flex flex-col py-16 bg-gradient-to-b from-white to-gray-200'>
       <div className='flex justify-center items-start flex-col my-10 mx-[10%] w-[80%]'>
         <h6 className='text-md text-amber-800 font-medium'>Trending Products</h6>
         <h1 className='font-bold text-5xl leading-18'>Top Rated Products</h1>
@@ -17,7 +17,6 @@ const TopProducts = () => {
           <TopProductCard product={topProduct} key={topProduct.id} />
         )) }
       </div>
-      <div className='absolute top-[50%] -z-10 w-full h-[500px] bg-gradient-to-b from-white to-gray-200' />
     </div>
   )
 }
@@ -25,7 +24,7 @@ const TopProducts = () => {
 
 const TopProductCard = ({product}) => {
   return(
-    <div className='flex flex-col space-y-3 bg-white max-w-[300px] rounded-xl p-5 justify-end items-center'>
+    <div className='flex shadow-xl flex-col space-y-3 bg-white max-w-[300px] rounded-xl p-5 justify-end items-center'>
       <img className='h-[220px] w-[150px] object-cover rounded-md' src={product.img} alt="" />
       <div className='flex flex-col gap-2 items-center'>
         <div className='flex items-center gap-1 font-semibold'>
