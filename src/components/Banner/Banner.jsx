@@ -18,19 +18,19 @@ const Banner = () => {
           <h1 className="font-bold text-5xl leading-20">Winter Sale Up To 50% Off</h1>
           <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni pariatur id cumque quasi quibusdam doloribus voluptate soluta reiciendis suscipit exercitationem!</p>
           <div className="flex flex-col mt-5 gap-5">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
               <GrStatusGood size={50} className="bg-orange-200 p-2 rounded-full" />
               <p className="font-semibold text-lg">Quality Products</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
               <CiDeliveryTruck size={50} className="bg-purple-200 p-2 rounded-full" />
               <p className="font-semibold text-lg">Fast Delivery</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
               <MdOutlinePayment size={50} className="bg-blue-200 p-2 rounded-full" />
               <p className="font-semibold text-lg">Easy Payment method</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
               <BiSolidOffer size={50} className="bg-green-200 p-2 rounded-full" />
               <p className="font-semibold text-lg">Get Offers</p>
             </div>
