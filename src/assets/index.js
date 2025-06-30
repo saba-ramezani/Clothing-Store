@@ -9,3 +9,7 @@ export {default as womenImg1} from './women/women.png'
 export {default as womenImg2} from './women/women2.jpg'
 export {default as womenImg3} from './women/women3.jpg'
 export {default as womenImg4} from './women/women4.jpg'
+
+export {default as shirtImg1} from './shirt/shirt.png'
+export {default as shirtImg2} from './shirt/shirt2.png'
+export {default as shirtImg3} from './shirt/shirt3.png'

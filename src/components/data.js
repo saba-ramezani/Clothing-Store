@@ -1,4 +1,4 @@
-import { heroSaleImg, heroShoppingImg, heroWomenImg, womenImg1, womenImg2, womenImg3, womenImg4 } from "../assets";
+import { heroSaleImg, heroShoppingImg, heroWomenImg, shirtImg1, shirtImg2, shirtImg3, womenImg1, womenImg2, womenImg3, womenImg4 } from "../assets";
 
 export const Menu = [
   {
@@ -115,5 +115,29 @@ export const ProductsData = [
     rating: 4.5,
     color: "Pink",
     aosDelay: "800",
+  },
+];
+
+export const TopProductsData = [
+  {
+    id: 1,
+    img: shirtImg1,
+    title: "Casual Wear",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 2,
+    img: shirtImg2,
+    title: "Printed shirt",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 3,
+    img: shirtImg3,
+    title: "Women shirt",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];

@@ -1,4 +1,5 @@
 import { Navbar, Hero, Products } from './components'
+import TopProducts from './components/TopProducts/TopProducts'
 
 const App = () => {
   return (
@@ -6,6 +7,7 @@ const App = () => {
       <Navbar/>
       <Hero />
       <Products />
+      <TopProducts />
     </div>
   )
 }
