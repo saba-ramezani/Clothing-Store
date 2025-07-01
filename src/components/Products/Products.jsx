@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const Products = () => {
   return (
-    <div className='w-full dark:bg-gray-950 bg-gray-50 py-20 border-y-[1px] dark:border-y-white border-y-gray-400'>
+    <div className='w-full dark:bg-gray-950 from-white to-[#f8ead5] py-20 bg-gradient-to-tl dark:from-black dark:to-[#301c02]'>
       <div className='flex flex-col mx-[10%] w-[80%]'>
       <div className='flex justify-center items-center flex-col mb-10'>
         <h6 className='text-md text-amber-800 font-medium'>Top Selling Products for YOU</h6>
