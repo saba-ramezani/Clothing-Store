@@ -15,3 +15,5 @@ export {default as shirtImg2} from './shirt/shirt2.png'
 export {default as shirtImg3} from './shirt/shirt3.png'
 
 export {default as banner} from './website/orange-pattern.jpg'
+
+export {default as footerBannerImg} from './website/footer-pattern.jpg'

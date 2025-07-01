@@ -27,7 +27,7 @@ const Testimonials = () => {
         >
           {TestimonialData.map((data) => (
             <SwiperSlide key={data.id}>
-              <div className="relative bg-amber-100 mx-5 flex flex-col px-5 py-8 rounded-4xl ">
+              <div className="relative shadow-xl bg-amber-100 mx-5 flex flex-col px-5 py-8 rounded-4xl ">
                 <span className="absolute right-5 top-[-50px] text-9xl text-gray-500 font-serif opacity-35 z-0">,,</span>
                 <div className="mb-5 z-10">
                   <img className="h-[75px] w-[75px] rounded-full " src={data.img} alt="" />
