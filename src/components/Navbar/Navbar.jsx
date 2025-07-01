@@ -21,7 +21,9 @@ const Navbar = ({setIsVisible}) => {
 
 
 const Topbar = ({setIsVisible}) => {
-  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+  };
   return (
     <div className='bg-[#785424] h-[55px] flex items-center justify-center '>
       <div className='container flex justify-between items-center'>
@@ -41,8 +43,12 @@ const Topbar = ({setIsVisible}) => {
             <FaShoppingCart size={20} className='text-white' />
           </button>
           <div className='flex items-center'>
-            <img src={lightModeBtn} className={classNames('h-[25px] cursor-pointer transition-all duration-300', theme === "light" ? "block" : "hidden")} onClick={() => setTheme('dark')} />
-            <img src={darkModeBtn} className={classNames('h-[25px] cursor-pointer transition-all duration-300', theme === "dark" ? "block" : "hidden")} onClick={() => setTheme('light')} />
+            <img src={lightModeBtn} 
+              className='h-[25px] cursor-pointer transition-all duration-300 dark:block hidden' 
+              onClick={toggleTheme} />
+            <img src={darkModeBtn} 
+              className='h-[25px] cursor-pointer transition-all duration-300 dark:hidden block' 
+              onClick={toggleTheme} />
           </div>
         </div>
       </div>
