@@ -31,7 +31,6 @@ const Topbar = ({setIsVisible}) => {
   }, [])
 
   const toggleTheme = () => {
-    // document.documentElement.classList.toggle('dark');
     if (theme === "light") {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark');
@@ -45,11 +44,11 @@ const Topbar = ({setIsVisible}) => {
   return (
     <div className='dark:bg-[#785424] bg-[#f5dfbf] h-[55px] flex items-center justify-center '>
       <div className='container flex justify-between items-center'>
-        <a href="#" className='flex items-center gap-2' data-aos="flip-right">
+        <a href="#" className='items-center gap-2 sm:flex hidden' data-aos="flip-right">
           <img src={logo} alt="" className='w-[40px] h-[35px]' />
           <span className='text-black dark:text-white font-bold text-3xl'>Shopsy</span>
         </a>
-        <div className='flex gap-3'>
+        <div className='flex gap-3 w-full justify-around sm:w-fit'>
           <div className='group flex justify-center text-gray-800 dark:text-gray-200 items-center dark:bg-[#202c34] bg-white h-[35px] border-[1px] border-gray-400 px-3 rounded-[20px]'>
             <input type="text" className='text-gray-800 dark:text-gray-200 w-[150px] group-hover:w-[200px] transition-all duration-300 focus:outline-none' placeholder='search' />
             <FaSearch size={15} className='text-gray-400 group-hover:text-[#fea928] ml-2' />
@@ -77,7 +76,7 @@ const Topbar = ({setIsVisible}) => {
 
 const Menubar = () => {
   return (
-    <div data-aos="zoom-in" className='dark:bg-[#181c24] bg-white dark:text-white text-black'>
+    <div data-aos="zoom-in" className='dark:bg-[#181c24] md:block hidden bg-white dark:text-white text-black'>
       <ul className='flex items-center gap-4 justify-center py-2'>
         {Menu.map((item) => {
           if (item.name === "Trending Items") {
