@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { DropdownLinks, Menu } from '../data';
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useEffect, useState } from 'react';
 
 
 
@@ -17,8 +18,29 @@ const Navbar = ({setIsVisible}) => {
 
 
 const Topbar = ({setIsVisible}) => {
+  const [theme, setTheme] = useState(null)
+
+  useEffect(() => {
+    const currTheme = localStorage.getItem('theme')
+    setTheme(currTheme)
+    if (currTheme === "dark") {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
   const toggleTheme = () => {
-    document.documentElement.classList.toggle('dark');
+    // document.documentElement.classList.toggle('dark');
+    if (theme === "light") {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light');
+      setTheme('light')
+    }
   };
   return (
     <div className='dark:bg-[#785424] bg-[#f5dfbf] h-[55px] flex items-center justify-center '>
