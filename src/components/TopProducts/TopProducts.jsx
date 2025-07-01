@@ -7,12 +7,12 @@ import { FaShoppingCart } from "react-icons/fa";
 const TopProducts = ({setIsVisible}) => {
   return (
     <div className='flex flex-col py-16 bg-gradient-to-b dark:from-black dark:to-gray-800 from-white to-gray-200'>
-      <div className='flex justify-center items-start flex-col my-10 mx-[10%] w-[80%]'>
-        <h6 className='text-md text-amber-800 font-medium' data-aos="slide-right">Trending Products</h6>
-        <h1 className='font-bold text-5xl leading-18 dark:text-white text-black' data-aos="slide-right">Top Rated Products</h1>
-        <p className='max-w-[800px] text-center text-gray-500' data-aos="slide-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore natus atque quae ut facere dolores soluta, saepe?</p>
+      <div className='flex justify-center lg:items-start items-center flex-col my-10 mx-[10%] w-[80%]'>
+        <h6 className='text-sm md:text-md text-amber-800 font-medium' data-aos="slide-right">Trending Products</h6>
+        <h1 className='font-bold  my-5 md:text-left sm:text-2xl md:text-3xl lg:text-4xl text-2xl dark:text-white text-black' data-aos="slide-right">Top Rated Products</h1>
+        <p className='max-w-[800px] text-sm md:text-sm text-center text-gray-500' data-aos="slide-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore natus atque quae ut facere dolores soluta, saepe?</p>
       </div>
-      <div className='flex flex-row justify-evenly items-center mx-[10%] w-[80%]'>
+      <div className='flex flex-wrap justify-center gap-4 md:justify-evenly items-center mx-[10%] w-[80%]'>
         {TopProductsData.map((topProduct) => (
           <TopProductCard product={topProduct} key={topProduct.id} setIsVisible={setIsVisible} />
         )) }
