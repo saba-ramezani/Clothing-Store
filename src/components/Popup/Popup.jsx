@@ -1,12 +1,53 @@
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
+import { useEffect, useRef } from "react";
 
 
 const Popup = ({isVisible, setIsVisible}) => {
+
+    const popupRef = useRef();
+
+  useEffect(() => {
+    // Prevent background scroll
+    if (isVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+      document.body.style.overflowX = "hidden"
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflowY = "auto";
+      document.body.style.overflowX = "hidden"
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    // Close popup if click is outside the box
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setIsVisible(false);
+      }
+    };
+
+    if (isVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isVisible]);
+
+  if (!isVisible) return null;
+
   if (isVisible) {
     return(
         <div className='fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-[rgba(0,0,0,0.5)] z-50 overflow-hidden'>
-            <div className='bg-white rounded h-fit w-[400px] px-8 py-8 flex flex-col justify-center items-center'> 
+            <div         
+                ref={popupRef}
+                className='bg-white rounded h-fit w-[400px] px-8 py-8 flex flex-col justify-center items-center'> 
                 <div className='flex justify-between w-full items-center  mb-10'>
                     <h1 className='text-xl text-center'>Order Your Item</h1>
                     <button className="cursor-pointer" onClick={() => setIsVisible(false)}>
