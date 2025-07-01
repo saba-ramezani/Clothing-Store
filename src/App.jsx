@@ -1,16 +1,19 @@
-import { Navbar, Hero, Products, TopProducts, Banner, Subscribe, Testimonials, Footer } from './components'
+import { useState } from 'react'
+import { Navbar, Hero, Products, TopProducts, Banner, Subscribe, Testimonials, Footer, Popup } from './components'
 
 const App = () => {
+  const [isVisible, setIsVisible] = useState(false)
   return (
     <div className=''>
-      <Navbar/>
-      <Hero />
+      <Navbar setIsVisible={setIsVisible}/>
+      <Hero setIsVisible={setIsVisible} />
       <Products />
-      <TopProducts />
+      <TopProducts setIsVisible={setIsVisible} />
       <Banner />
       <Subscribe />
       <Testimonials />
       <Footer />
+      <Popup isVisible={isVisible} setIsVisible={setIsVisible} />
     </div>
   )
 }

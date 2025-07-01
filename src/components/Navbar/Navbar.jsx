@@ -10,17 +10,17 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 
 
-const Navbar = () => {
+const Navbar = ({setIsVisible}) => {
   return (
     <div className='flex flex-col w-screen'>
-      <Topbar />
+      <Topbar setIsVisible={setIsVisible} />
       <Menubar />
     </div>
   )
 }
 
 
-const Topbar = () => {
+const Topbar = ({setIsVisible}) => {
   const [theme, setTheme] = useState('light');
   return (
     <div className='bg-[#785424] h-[55px] flex items-center justify-center '>
@@ -34,7 +34,9 @@ const Topbar = () => {
             <input type="text" className='text-gray-200 w-[150px] group-hover:w-[200px] transition-all duration-300 focus:outline-none' placeholder='search' />
             <FaSearch size={15} className='text-gray-400 group-hover:text-[#fea928] ml-2' />
           </div>
-          <button className='group flex justify-center items-center transition-all duration-300 bg-gradient-to-r from-[#e79924] to-[#d47c01] h-[35px] px-5 rounded-[20px] gap-2'>
+          <button 
+          onClick={() => setIsVisible(true)}
+          className='group cursor-pointer flex justify-center items-center transition-all duration-300 bg-gradient-to-r from-[#e79924] to-[#d47c01] h-[35px] px-5 rounded-[20px] gap-2'>
             <span className='text-white group-hover:block hidden transition-all duration-300 font-semibold text-[17px]'>Order</span>
             <FaShoppingCart size={20} className='text-white' />
           </button>
