@@ -11,7 +11,7 @@ import { ImageList } from '../data';
 const Hero = ({setIsVisible}) => {
   
   return (
-    <div className='relative flex h-[550px] overflow-hidden dark:bg-black bg-white z-10'>
+    <div className='relative flex h-screen max-h-[800px] overflow-hidden dark:bg-black bg-white z-10'>
         <div className='dark:bg-[#785424] bg-[#f5dfbf] h-[700px] w-[700px] rounded-3xl rotate-[45deg] absolute top-[-300px] right-0 -z-10' />
         <Swiper 
             loop={true} 
