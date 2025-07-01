@@ -10,8 +10,8 @@ const App = () => {
       <Products />
       <TopProducts setIsVisible={setIsVisible} />
       <Banner />
-      <Subscribe />
       <Testimonials />
+      <Subscribe />
       <Footer />
       <Popup isVisible={isVisible} setIsVisible={setIsVisible} />
     </div>

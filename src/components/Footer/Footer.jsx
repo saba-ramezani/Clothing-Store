@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   return (
-    <div style={BannerImg} className="mt-10">
+    <div style={BannerImg} className="pt-10">
       <div className="w-full h-fit pb-[250px] px-[50px] pt-[50px] space-x-5 grid grid-cols-4 justify-center items-center text-white">
         <div className="col-span-1">
           <div className="flex items-center gap-5 mb-5">
