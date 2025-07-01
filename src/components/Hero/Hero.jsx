@@ -28,7 +28,8 @@ const Hero = ({setIsVisible}) => {
                 <div className='flex h-full mx-[10%] w-[80%] justify-center' key={item.id}>
                   <div className='flex max-w-[50%] justify-center flex-1/2'>
                   <div className='flex flex-col justify-center max-w-[500px] gap-6 dark:text-white text-black'>
-                    <h1 className='font-bold text-6xl leading-20 '>{item.title}</h1>
+                    <h1
+                    className='font-bold text-6xl leading-20 '>{item.title}</h1>
                     <p className='text-lg '>{item.description}</p>
                     <button 
                     onClick={() => setIsVisible(true)}

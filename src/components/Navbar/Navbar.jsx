@@ -23,7 +23,7 @@ const Topbar = ({setIsVisible}) => {
   return (
     <div className='dark:bg-[#785424] bg-[#f5dfbf] h-[55px] flex items-center justify-center '>
       <div className='container flex justify-between items-center'>
-        <a href="#" className='flex items-center gap-2'>
+        <a href="#" className='flex items-center gap-2' data-aos="flip-right">
           <img src={logo} alt="" className='w-[40px] h-[35px]' />
           <span className='text-black dark:text-white font-bold text-3xl'>Shopsy</span>
         </a>

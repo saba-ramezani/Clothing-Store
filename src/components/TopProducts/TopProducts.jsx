@@ -8,9 +8,9 @@ const TopProducts = ({setIsVisible}) => {
   return (
     <div className='flex flex-col py-16 bg-gradient-to-b dark:from-black dark:to-gray-800 from-white to-gray-200'>
       <div className='flex justify-center items-start flex-col my-10 mx-[10%] w-[80%]'>
-        <h6 className='text-md text-amber-800 font-medium'>Trending Products</h6>
-        <h1 className='font-bold text-5xl leading-18 dark:text-white text-black'>Top Rated Products</h1>
-        <p className='max-w-[800px] text-center text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore natus atque quae ut facere dolores soluta, saepe?</p>
+        <h6 className='text-md text-amber-800 font-medium' data-aos="slide-right">Trending Products</h6>
+        <h1 className='font-bold text-5xl leading-18 dark:text-white text-black' data-aos="slide-right">Top Rated Products</h1>
+        <p className='max-w-[800px] text-center text-gray-500' data-aos="slide-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore natus atque quae ut facere dolores soluta, saepe?</p>
       </div>
       <div className='flex flex-row justify-evenly items-center mx-[10%] w-[80%]'>
         {TopProductsData.map((topProduct) => (
@@ -24,7 +24,7 @@ const TopProducts = ({setIsVisible}) => {
 
 const TopProductCard = ({product, setIsVisible}) => {
   return(
-    <div className='flex shadow-xl flex-col space-y-3 dark:bg-black bg-white max-w-[300px] rounded-xl p-5 justify-end items-center'>
+    <div data-aos="flip-right" className='flex shadow-xl flex-col space-y-3 dark:bg-black bg-white max-w-[300px] rounded-xl p-5 justify-end items-center'>
       <img className='h-[220px] w-[150px] object-cover rounded-md' src={product.img} alt="" />
       <div className='flex flex-col gap-2 items-center'>
         <div className='flex items-center gap-1 font-semibold'>
