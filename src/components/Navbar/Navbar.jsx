@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
 import { darkModeBtn, lightModeBtn, logo } from '../../assets'
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import classNames from "classnames";
 import { DropdownLinks, Menu } from '../data';
 import { IoMdArrowDropdown } from "react-icons/io";
-
-
 
 
 
@@ -25,15 +21,15 @@ const Topbar = ({setIsVisible}) => {
     document.documentElement.classList.toggle('dark');
   };
   return (
-    <div className='bg-[#785424] h-[55px] flex items-center justify-center '>
+    <div className='dark:bg-[#785424] bg-[#f5dfbf] h-[55px] flex items-center justify-center '>
       <div className='container flex justify-between items-center'>
         <a href="#" className='flex items-center gap-2'>
           <img src={logo} alt="" className='w-[40px] h-[35px]' />
-          <span className='text-white font-bold text-3xl'>Shopsy</span>
+          <span className='text-black dark:text-white font-bold text-3xl'>Shopsy</span>
         </a>
         <div className='flex gap-3'>
-          <div className='group flex justify-center items-center bg-[#202c34] h-[35px] border-[1px] border-gray-400 px-3 rounded-[20px]'>
-            <input type="text" className='text-gray-200 w-[150px] group-hover:w-[200px] transition-all duration-300 focus:outline-none' placeholder='search' />
+          <div className='group flex justify-center text-gray-800 dark:text-gray-200 items-center dark:bg-[#202c34] bg-white h-[35px] border-[1px] border-gray-400 px-3 rounded-[20px]'>
+            <input type="text" className='text-gray-800 dark:text-gray-200 w-[150px] group-hover:w-[200px] transition-all duration-300 focus:outline-none' placeholder='search' />
             <FaSearch size={15} className='text-gray-400 group-hover:text-[#fea928] ml-2' />
           </div>
           <button 
@@ -59,20 +55,20 @@ const Topbar = ({setIsVisible}) => {
 
 const Menubar = () => {
   return (
-    <div data-aos="zoom-in" className='bg-[#181c24]'>
+    <div data-aos="zoom-in" className='dark:bg-[#181c24] bg-white dark:text-white text-black'>
       <ul className='flex items-center gap-4 justify-center py-2'>
         {Menu.map((item) => {
           if (item.name === "Trending Items") {
             return (
               <li id={item.id} className='group' key={item.id}>
-                <a href={item.link} className='hover:text-[#fea928] flex items-center gap-2 text-white px-4 text-[15px]'>
+                <a href={item.link} className='hover:text-[#fea928]  flex items-center gap-2 px-4 text-[15px]'>
                   {item.name}
                   <IoMdArrowDropdown className='group-hover:rotate-180 transition-all duration-200' />
                   </a>
-                <div className='absolute z-[1000] hidden group-hover:flex bg-white py-1 rounded-xl'>
+                <div className='absolute z-[1000] hidden group-hover:flex dark:bg-[#181c24] bg-white py-1 rounded-xl'>
                   <ul className=''>
                     {DropdownLinks.map((dropdownItem) => (
-                      <li key={dropdownItem.id} className='p-3 flex text-[15px] rounded-xl hover:bg-[#f5dfbf] '>
+                      <li key={dropdownItem.id} className='p-3 flex text-[15px] rounded-xl hover:bg-[#f5dfbf] dark:hover:text-black'>
                         <a href={dropdownItem.link} className='w-full'>{dropdownItem.name}</a>
                       </li>
                     ))}
@@ -83,7 +79,7 @@ const Menubar = () => {
           } else {
             return (
             <li id={item.id} key={item.id}>
-              <a href={item.link} className='hover:text-[#fea928] text-white px-4 text-[15px]'>{item.name}</a>
+              <a href={item.link} className='hover:text-[#fea928] px-4 text-[15px]'>{item.name}</a>
             </li>
             )
           }
