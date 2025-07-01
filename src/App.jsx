@@ -15,7 +15,7 @@ const App = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className=''>
+    <div className='min-h-screen overflow-hidden'>
       <Navbar setIsVisible={setIsVisible}/>
       <Hero setIsVisible={setIsVisible} />
       <Products />
